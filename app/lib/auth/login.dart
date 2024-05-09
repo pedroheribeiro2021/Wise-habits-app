@@ -36,9 +36,9 @@ class _LoginPageState extends State<LoginPage> {
               children: <Widget>[
                 // FlutterLogo(size: 100),
                 Image.asset('assets/images/Wise habits.png', height: 200),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 TextFormField(
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                       labelText: 'Email', hintText: 'Digite seu E-mail'),
                   keyboardType: TextInputType.emailAddress,
                   validator: (value) {
@@ -51,7 +51,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 TextFormField(
                   decoration:
-                      InputDecoration(labelText: 'Senha', hintText: 'Senha'),
+                      const InputDecoration(labelText: 'Senha', hintText: 'Senha'),
                   obscureText: true,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
@@ -61,17 +61,17 @@ class _LoginPageState extends State<LoginPage> {
                   },
                   onSaved: (value) => _password = value!,
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: _submit,
-                  child: Text('Entrar'),
+                  child: const Text('Entrar'),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 TextButton(
                   onPressed: () {
                     Navigator.pushNamed(context, '/register');
                   },
-                  child: Text('Cadastre-se'),
+                  child: const Text('Cadastre-se'),
                 ),
               ],
             ),
